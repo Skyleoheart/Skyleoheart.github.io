@@ -181,25 +181,7 @@
                 }
                 alert('get prime 成功，prime: ' + result.card.prime)
                 var command = `
-                Use following command to send to server \n\n
-                curl -X POST https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime \\
-                -H 'content-type: application/json' \\
-                -H 'x-api-key: partner_QuixIk5MBLrwvDRbvi2f9hAJ6qD9Eap2D3JfnOdzgVLjbQ2AsXOZQIB3' \\
-                -d '{
-                    "partner_key": "partner_QuixIk5MBLrwvDRbvi2f9hAJ6qD9Eap2D3JfnOdzgVLjbQ2AsXOZQIB3",
-                    "prime": "test_3a2fb2b7e892b914a03c95dd4dd5dc7970c908df67a49527c0a648b2bc9",
-                    "amount": "1",
-                    "merchant_id": "leoheart0924su_TAISHIN",
-                    "details": "Some item",
-                    "rec_trade_id": D201909207TSWpl,
-                    "cardholder": {
-                        "phone_number": "+886923456789",
-                        "name": "王小明",
-                        "email": "leoheart0924@gmail.com",
-                        "zip_code": "100",
-                        "address": "台北市天龍區芝麻街1號1樓",
-                        "national_id": "A123456789"
-                    }
+               
                 }'`.replace(/                /g, '')
                 document.querySelector('#curl').innerHTML = command
             })
